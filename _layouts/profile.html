@@ -1,0 +1,73 @@
+---
+layout: default
+---
+{% assign author = page.name | split:"." | first %}
+{% assign profile = site.data.authors[author] %}
+
+<!-- About Me Block -->
+<div class="container content-sm">
+  <div class="row about-me">
+    <div class="col-sm-4 shadow-wrapper md-margin-bottom-40">
+      <div class="box-shadow shadow-effect-2">
+        <img class="img-responsive img-bordered full-width" src="{{ profile.avatar_440 }}" alt="{{ profile.name }}">
+      </div>
+    </div>
+
+    <div class="col-sm-8">
+      <div class="overflow-h">
+        <div class="pull-left">
+          <h2>{{ profile.name }}</h2>
+          <span>[Title]</span>
+        </div>
+        <ul class="social-icons pull-right">
+          {% if profile.github %}
+          <li><a class="rounded-x social_github" data-original-title="GitHub" href="https://github.com/{{ profile.github }}"></a></li>
+          {% endif %}
+          {% if profile.twitter %}
+          <li><a class="rounded-x social_twitter" data-original-title="Twitter" href="https://www.twitter.com/{{ profile.twitter }}"></a></li>
+          {% endif %}
+          {% if profile.linkedin %}
+          <li><a class="rounded-x social_linkedin" data-original-title="Linkedin" href="https://www.linkedin.com/in/{{ profile.linkedin }}"></a></li>
+          {% endif %}
+        </ul>
+      </div>
+      <p>
+        {{ content }}
+
+      <div class="row">
+        <!-- Smallest Progress Bar -->
+        <div class="col-md-6 md-margin-bottom-40">
+          <h3 class="heading-xs">Web Design - 88%</h3>
+          <div class="progress progress-u progress-sm">
+            <div class="progress-bar progress-bar-dark" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%">
+            </div>
+          </div>
+
+          <h3 class="heading-xs">jQuery - 93%</h3>
+          <div class="progress progress-u progress-sm">
+            <div class="progress-bar progress-bar-dark" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" style="width: 93%">
+            </div>
+          </div>
+        </div>
+        <!-- End Smallest Progress Bar -->
+
+        <!-- Smallest Progress Bar -->
+        <div class="col-md-6 md-margin-bottom-40">
+          <h3 class="heading-xs">PHP/WordPress - 76%</h3>
+          <div class="progress progress-u progress-sm">
+            <div class="progress-bar progress-bar-dark" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" style="width: 76%">
+            </div>
+          </div>
+
+          <h3 class="heading-xs">JavaScript - 97%</h3>
+          <div class="progress progress-u progress-sm">
+            <div class="progress-bar progress-bar-dark" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100" style="width: 97%">
+            </div>
+          </div>
+        </div>
+        <!-- End Smallest Progress Bar -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End About Me Block -->
