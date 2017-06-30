@@ -16,18 +16,12 @@
           <div class="posts">
             <div class="headline"><h2>Latest Posts</h2></div>
             <ul class="list-unstyled latest-list">
+              {% for post in site.posts limit:3 %}
               <li>
-                <a href="#">Incredible content</a>
-                <small>May 8, 2014</small>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <small>{{ post.date | date: '%B %d, %Y' }}</small>
               </li>
-              <li>
-                <a href="#">Best shoots</a>
-                <small>June 23, 2014</small>
-              </li>
-              <li>
-                <a href="#">New Terms and Conditions</a>
-                <small>September 15, 2014</small>
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </div><!--/col-md-3-->
