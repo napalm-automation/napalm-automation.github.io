@@ -1,0 +1,22 @@
+---
+layout: paginated
+---
+{% if site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<div class="news-v3 bg-color-white margin-bottom-30">
+  <div class="news-v3-in">
+    <h2>{{ page.title }}</h2>
+    <ul class="list-inline posted-info">
+      <li>By <a href="#">{{ author.name }}</a></li>
+      <li>Posted {{ page.date | date: '%B %d, %Y' }}</li>
+    </ul>
+
+    {{ content }}
+
+  </div>
+</div>
+<!-- End News v3 -->

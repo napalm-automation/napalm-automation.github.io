@@ -1,0 +1,40 @@
+---
+title: Napalm Automation Blog
+---
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<title>{{ page.title }}</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/assets/img/favicon-default.ico">
+
+  {% include header-meta.html %}
+  {% include header-assets.html %}
+  {% include analytics.html %}
+
+</head>
+
+<body class="header-fixed header-fixed-space">
+  <div class="wrapper">
+
+  {% include primary-navigation.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+ </div><!--/wrapper-->
+ {% include footer-assets.html %}
+
+
+</body>
+</html>
