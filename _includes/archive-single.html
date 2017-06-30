@@ -1,7 +1,9 @@
 {% if site.data.authors[post.author] %}
   {% assign author = site.data.authors[post.author] %}
+  {% assign show_profile = true %}
 {% else %}
   {% assign author = site.author %}
+  {% assign show_profile = false %}
 {% endif %}
 
 <!-- Blog Posts -->
@@ -9,7 +11,7 @@
   <div class="news-v3-in">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <ul class="list-inline posted-info">
-      <li>By {{ author.name }}</li>
+      <li>By {% if show_profile %}<a href="{{ site.url }}/{{ post.author }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</li>
       <li>Posted {{ post.date | date: '%B %d, %Y' }}</li>
     </ul>
     <p>{{ post.content | split:"<!--more-->" | first | strip_html }}</p>
