@@ -2,8 +2,8 @@
 dbarrosop:
   name        : "David Barroso"
   bio         : "Works at <a href='https://www.fastly.com/'>Fastly</a>"
-  avatar      : "/assets/napalm/dbarrosop-160x160.png"
-  avatar_440  :  "/assets/napalm/dbarrosop-440x440.png"
+  avatar      : "dbarrosop-160x160.png"
+  avatar_440  : "dbarrosop-440x440.png"
   uri         : "https://www.dravetech.com/"
   github      : "dbarrosop"
   twitter     : "dbarrosop"
@@ -13,8 +13,8 @@ dbarrosop:
 mirceaulinic:
   name        : "Mircea Ulinic"
   bio         : "Works at <a href='https://www.cloudflare.com/'>Cloudflare</a>"
-  avatar      : "/assets/napalm/mirceaulinic-160x160.png"
-  avatar_440  :  "/assets/napalm/mircea-398x398.jpeg"
+  avatar      : "mirceaulinic-160x160.png"
+  avatar_440  : "mircea-398x398.jpeg"
   github      : "mirceaulinic"
   uri         : "https://mirceaulinic.net/"
   twitter     : "mirceaulinic"
