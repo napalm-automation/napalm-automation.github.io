@@ -61,10 +61,15 @@ defaults:
       comments: true
       share: true
 
+  - scope:
+      path: ""
+      type: profiles
+    values:
+      layout: profile
 
 
 collections:
-  dictionary:
+  profiles:
     output: true
     permalink: /:collection/:path/
 

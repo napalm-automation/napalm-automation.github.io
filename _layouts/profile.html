@@ -1,15 +1,18 @@
 ---
 layout: default
 ---
-{% assign author = page.name | split:"." | first %}
+{% assign filename = page.path | split:"." | first %}
+{% assign author = filename | split:"/" | last %}
 {% assign profile = site.data.authors[author] %}
+
+
 
 <!-- About Me Block -->
 <div class="container content-sm">
   <div class="row about-me">
     <div class="col-sm-4 shadow-wrapper md-margin-bottom-40">
       <div class="box-shadow shadow-effect-2">
-        <img class="img-responsive img-bordered full-width" src="{{ profile.avatar_440 }}" alt="{{ profile.name }}">
+        <img class="img-responsive img-bordered full-width" src="/images/profiles/{{ profile.avatar_440 }}" alt="{{ profile.name }}">
       </div>
     </div>
 

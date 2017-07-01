@@ -6,7 +6,7 @@
 
 <div class="headline-v2"><h2>{{ author.name }}</h2></div>
 <dl class="dl-horizontal">
-  <dt><img src="{{ author.avatar }}" alt="{{ author.name }}" /></dt>
+  <dt><img src="/images/profiles/{{ author.avatar }}" alt="{{ author.name }}" /></dt>
   <dd>
     {% if author.uri %}
     <p><a href="{{ author.uri }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Homepage">
