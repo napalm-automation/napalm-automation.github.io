@@ -6,12 +6,13 @@ layout: paginated
 {% else %}
   {% assign author = site.author %}
 {% endif %}
+{% include load-profile-variable.html %}
 
 <div class="news-v3 bg-color-white margin-bottom-30">
   <div class="news-v3-in">
     <h2>{{ page.title }}</h2>
     <ul class="list-inline posted-info">
-      <li>By <a href="#">{{ author.name }}</a></li>
+      <li>By {% if profile %}<a href="{{ site.url }}{{ profile.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</li>
       <li>Posted {{ page.date | date: '%B %d, %Y' }}</li>
     </ul>
 

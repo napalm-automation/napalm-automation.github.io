@@ -1,0 +1,17 @@
+{% if post.author %}
+ {% assign ref_author = post.author %}
+{% else %}
+ {% assign ref_author = page.author %}
+{% endif %}
+
+{% assign profile = false %}
+{% for collection in site.collections %}
+ {% if collection.label == 'profiles' %}
+  {% for entry in collection.docs %}
+   {% assign ref_string = entry.path | split:"/" | last | split:"." | first %}
+   {% if ref_author == ref_string %}
+    {% assign profile = entry %}
+   {% endif %}
+  {% endfor %}
+ {% endif %}
+{% endfor %}
