@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-layout: default
+layout: page
 permalink: /contact/
 ---
 Contact us and learn more!
