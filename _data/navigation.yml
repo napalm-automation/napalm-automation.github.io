@@ -3,7 +3,7 @@ primary:
     url: /
   - title: Blog
     url: /blog/
-  - title: Contact
-    url: /contact/
+  - title: Community
+    url: /community/
   - title: Docs
     url: https://napalm.readthedocs.io
