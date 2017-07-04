@@ -6,6 +6,13 @@
     background: url(../img/nik-macmillan-1920.jpg) 50% 0 fixed;
 }
 
-.interactive-slider-v2.img-v3 {
+.interactive-slider-v2.img-home {
     background: url(../img/computer-front-1600.jpg) no-repeat;
+}
+
+
+.breadcrumbs-v3.img-community {
+    background: url(../img/bg/community-work-1920x850.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
