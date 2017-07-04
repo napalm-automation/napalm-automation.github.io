@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="interactive-slider-v2 interactive-slider-v2-md img-v3">
+<div class="interactive-slider-v2 interactive-slider-v2-md img-home">
   <div class="container">
     <h1 class="cd-headline letters type">
       <span>Napalm</span>
@@ -17,7 +17,7 @@ layout: default
   <div class="container content-sm">
     <div class="text-center margin-bottom-50">
       <h2 class="title-v2 title-center">What is Napalm?</h2>
-      <p class="space-lg-hor">Napalm is a <span class="color-orange">vendor neutral</span>, cross-platform open source project that provides a unified API to network devices.</p>
+      <p class="space-lg-hor">Napalm is a <strong>vendor neutral</strong>, cross-platform open source project that provides a unified API to network devices.</p>
     </div>
   </div>
 </div>
@@ -74,8 +74,8 @@ layout: default
   <div class="testimonials-v6 testimonials-wrap">
     <div class="headline-center">
       <h2>What people are saying</h2>
-      <p>Phasellus vitae ipsum ex. Etiam eu vestibulum ante. <br>
-        Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Morbi libero libero, imperdiet fringilla </p>
+      <p>People around the world are using Napalm to automate their network.<br>
+        Below are some examples of what people think about the project. Please note that this is based on our assumptions about what we think they are saying.</p>
     </div>
 
     <div class="row margin-bottom-50">
@@ -83,9 +83,9 @@ layout: default
         <div class="testimonials-info rounded-bottom bg-color-light">
           <img class="rounded-x" src="/assets/img/logo.png" alt="Logo">
           <div class="testimonials-desc">
-            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
+            <p>"Napalm has helped me so much, it's so easy to use I never want to leave work!"</p>
             <strong>Evan Bohringer</strong>
-            <span>Web Developer</span>
+            <span>Sr. Network Engineers</span>
           </div>
         </div>
       </div>
@@ -93,9 +93,10 @@ layout: default
         <div class="testimonials-info rounded-bottom bg-color-light">
           <img class="rounded-x" src="/assets/img/logo.png" alt="Logo">
           <div class="testimonials-desc">
-            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
+            <p>"I love the smell of automation in the mornings!"</p>
             <strong>Sara Lisbon</strong>
-            <span>Designer</span>
+            <span>Systems Engineer, Global Cosmetics Corperation</span>
+            <br />
           </div>
         </div>
       </div>
@@ -106,9 +107,9 @@ layout: default
         <div class="testimonials-info rounded-bottom bg-color-light">
           <img class="rounded-x" src="/assets/img/logo.png" alt="Logo">
           <div class="testimonials-desc">
-            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
+            <p>"I respect my husband a lot more after he started using Napalm to automate his network at work."</p>
             <strong>Alice Williams</strong>
-            <span>Web Developer</span>
+            <span>Soccer Mom, Rural Nebraska</span>
           </div>
         </div>
       </div>
@@ -116,9 +117,9 @@ layout: default
         <div class="testimonials-info rounded-bottom bg-color-light">
           <img class="rounded-x" src="/assets/img/logo.png" alt="Logo">
           <div class="testimonials-desc">
-            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
+            <p>"I used to configure access-lists all day long. With Napalm I'm done in twenty minutes and can play Cookie Clicker all day!"</p>
             <strong>Jane Wearne</strong>
-            <span>Technical Direector</span>
+            <span>Ex CLI Junkie</span>
           </div>
         </div>
       </div>
@@ -156,6 +157,41 @@ layout: default
 </div>
 
 <!--=== End Parallax Counter v4 ===-->
+
+<!--=== News Block ===-->
+<div class="container content-sm">
+  <div class="text-center margin-bottom-50">
+    <h2 class="title-v2 title-center">RECENT NEWS</h2>
+  </div>
+
+  <div class="row news-v2">
+   {% for post in site.posts limit:3 %}
+   {% if site.data.authors[post.author] %}
+     {% assign author = site.data.authors[post.author] %}
+   {% else %}
+     {% assign author = site.author %}
+   {% endif %}
+   {% include load-profile-variable.html %}
+
+    <div class="col-md-4 md-margin-bottom-30">
+      <div class="news-v2-desc bg-color-light">
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <small>By {% if profile %}<a href="{{ site.url }}{{ profile.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %} / {{ post.date | date: '%B %d, %Y' }}</small>
+        <p>{{ post.excerpt | strip_html }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="text-center margin-bottom-50">
+    <br />
+    <p class="space-lg-hor"><a href="{{ site.url }}/blog/"><button class="btn-u btn-u-orange" type="button">More from the blog</button></a>
+</p>
+  </div>
+
+
+</div>
+<!--=== End News Block ===-->
 
 
 
