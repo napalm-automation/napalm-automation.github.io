@@ -110,3 +110,9 @@ exclude:
   - Gemfile
   - vendor
   - tests/
+  - Makefile
+  - README.md
+
+sass:
+  sass_dir: _sass
+  style: compressed

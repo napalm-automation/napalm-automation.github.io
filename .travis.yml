@@ -3,6 +3,10 @@ language: ruby
 rvm:
 - 2.2.5
 
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
 install:
   - bundle install
   - sudo pip install pytest
@@ -13,3 +17,6 @@ script:
   - cp _site-validation/site-validation.md _pages
   - jekyll build
   - pytest
+
+after_success:
+  - make purge
