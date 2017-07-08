@@ -8,35 +8,44 @@
 
 
 <div class="headline-v2"><h2>{{ author.name }}</h2></div>
-<dl class="dl-horizontal">
-  <dt><img src="/images/profiles/{{ author.avatar }}" alt="{{ author.name }}" /></dt>
-  <dd>
-    {% if author.uri %}
-    <p><a href="{{ author.uri }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Homepage">
+
+<div class="magazine-posts col-md-12 col-sm-6 margin-bottom-30">
+  <div class="magazine-posts-img">
+    <img class="img-responsive" src="/images/profiles/{{ author.avatar_sidebar }}" alt="{{ author.name }}">
+  </div>
+  <ul class="list-inline">
+{% if author.uri %}
+    <li>
+      <a href="{{ author.uri }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Website">
         <i class="fa fa-home"></i>
-       </a>
-    </p>
-    {% endif %}
-    {% if author.github %}
-    <p><a href="https://github.com/{{ author.github }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub">
+      </a>
+    </li>
+{% endif %}
+{% if author.github %}
+    <li>
+      <a href="https://github.com/{{ author.github }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="GitHub">
         <i class="fa fa-github"></i>
-       </a>
-    </p>
-    {% endif %}
-    {% if author.twitter %}
-    <p><a href="https://www.twitter.com/{{ author.twitter }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+      </a>
+    </li>
+{% endif %}
+{% if author.twitter %}
+    <li>
+      <a href="https://www.twitter.com/{{ author.twitter }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
         <i class="fa fa-twitter"></i>
-       </a>
-    </p>
-    {% endif %}
-    {% if author.linkedin %}
-    <p><a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+      </a>
+    </li>
+{% endif %}
+{% if author.linkedin %}
+    <li>
+      <a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIn">
         <i class="fa fa-linkedin"></i>
-       </a>
-    </p>
-    {% endif %}
-  </dd>
-</dl>
+      </a>
+    </li>
+{% endif %}
+
+
+  </ul>
+</div>
 
 <!-- Latest Links -->
 <ul class="list-unstyled blog-latest-posts margin-bottom-50">
