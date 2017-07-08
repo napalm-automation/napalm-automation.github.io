@@ -6,9 +6,9 @@
  * Website: http://htmlstream.com
 */
 
-/*Import Global Compulsory CSS Files*/
-@import url(app.css);
-@import url(blocks.css);
+/*Import Global Compulsory CSS Files
+ * Imported from napalm.scss instead
+*/
 
 /*Import CSS Plugins*/
 @import url(plugins/style-switcher.css);
