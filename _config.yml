@@ -24,7 +24,7 @@ incremental: false
 
 build:
   prod: true
-  analytics: false
+  analytics: UA-102455886-1
 
 
 encoding: "utf-8"

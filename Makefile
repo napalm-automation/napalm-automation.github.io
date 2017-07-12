@@ -16,7 +16,7 @@ serve: stop
 		-p 4000:4000 \
 		-v $(PWD):/srv/jekyll \
 		napalm-automation-jekyll:latest \
-		jekyll serve
+		jekyll serve --config _config.yml,_config-dev.yml
 
 .PHONY: stop
 stop:
