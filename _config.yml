@@ -67,6 +67,12 @@ defaults:
     values:
       layout: profile
 
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
 
 collections:
   profiles:
