@@ -37,7 +37,7 @@ defaults:
     values:
       layout: post
       read_time: false
-      comments: true
+      comments: false
 
   - scope:
       path: "_posts/dbarrosop"
@@ -47,7 +47,7 @@ defaults:
       layout: post
       author_profile: true
       read_time: false
-      comments: true
+      comments: false
       share: true
 
   - scope:
@@ -58,7 +58,7 @@ defaults:
       layout: post
       author_profile: true
       read_time: false
-      comments: true
+      comments: false
       share: true
 
   - scope:
@@ -72,7 +72,7 @@ defaults:
       type: posts
     values:
       layout: post
-      comments: true
+      comments: false
 
 collections:
   profiles:
