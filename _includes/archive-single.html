@@ -13,8 +13,9 @@
       <li>By {% if profile %}<a href="{{ site.url }}{{ profile.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</li>
       <li>Posted {{ post.date | date: '%B %d, %Y' }}</li>
     </ul>
-    <p>{{ post.content | split:"<!--more-->" | first | strip_html }}</p>
-    <a href="{{ post.url }}"><button class="btn-u btn-u-orange" type="button">Read More</button></a>
+    {{ post.content | split:"<!--more-->" | first }}
+
+    <p><a href="{{ post.url }}"><button class="btn-u btn-u-orange" type="button">Read More</button></a></p>
   </div>
 </div>
 <!-- End Blog Posts -->

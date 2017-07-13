@@ -72,7 +72,7 @@ defaults:
       type: posts
     values:
       layout: post
-      comments: false
+      comments: true
 
 collections:
   profiles:
