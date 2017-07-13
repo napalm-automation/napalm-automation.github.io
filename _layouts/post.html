@@ -21,3 +21,7 @@ layout: paginated
   </div>
 </div>
 <!-- End News v3 -->
+
+{% if page.comments %}
+{% include disqus.html %}
+{% endif %}
