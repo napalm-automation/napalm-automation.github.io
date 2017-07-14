@@ -1,8 +1,8 @@
 primary:
   - title: Home
     url: /
-  - title: Blog
-    url: /blog/
+  - title: News
+    url: /news/
   - title: Community
     url: /community/
   - title: Docs
