@@ -13,10 +13,10 @@ install:
   - sudo pip install pytest
 
 script:
-  - jekyll build
+  - jekyll build --future --drafts
   - htmlproofer ./_site --allow-hash-href --internal-domains napalm-automation.net --http-status-ignore 999 --check-html
   - cp _site-validation/site-validation.md _pages
-  - jekyll build
+  - jekyll build --future --drafts
   - pytest
 
 after_success:
