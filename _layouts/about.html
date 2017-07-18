@@ -1,0 +1,135 @@
+---
+layout: default
+---
+<div class="bg-grey">
+  <div class="container content-sm">
+    <div class="headline-center">
+      <h2 class="title-v2 title-center">About Napalm</h2>
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+<div class="bg-grey">
+  <div class="container content-sm">
+    <div class="headline-center">
+      <h2 class="title-v2 title-center">Meet the core team</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+{% assign direction = "right" %}
+
+{% for author in site.data.authors %}
+{% assign profile = author[1] %}
+{% assign profile_page = false %}
+{% for collection in site.collections %}
+ {% if collection.label == 'profiles' %}
+  {% for entry in collection.docs %}
+   {% assign ref_string = entry.path | split:"/" | last | split:"." | first %}
+   {% if profile.github == ref_string %}
+    {% assign profile_page = entry %}
+   {% endif %}
+  {% endfor %}
+ {% endif %}
+{% endfor %}
+
+{% if profile.napalm_core %}
+{% if direction == "right" %}
+{% assign arrow = "team-arrow-right" %}
+{% assign pull = "" %}
+{% assign direction = "left" %}
+{% else %}
+{% assign arrow = "col-md-push-6 team-arrow-left" %}
+{% assign pull = "col-md-pull-6" %}
+{% assign direction = "right" %}
+{% endif %}
+<div class="row team-v7 no-gutter equal-height-columns">
+  <div class="col-md-6 {{ arrow }}">
+    <div class="dp-table">
+      <div class="equal-height-column dp-table-cell team-v7-in">
+        <span class="team-v7-name">{{ profile.name }}</span>
+        <span class="team-v7-position">{{ profile.title }}</span>
+        <p>{{ profile.bio }}</p>
+        {% if profile_page.url %}<p>Read <a href="{{ site.url }}{{ profile_page.url }}"> more about {{ profile.name }}</a></p>{% endif %}
+        <ul class="list-inline social-icons-v1">
+          {% if profile.uri %}<li><a href="{{ profile.uri }}"><i class="fa fa-home"></i></a></li>{% endif %}
+          {% if profile.github %}<li><a href="https://github.com/{{ profile.github }}"><i class="fa fa-github"></i></a></li>{% endif %}
+          {% if profile.twitter %}<li><a href="https://www.twitter.com/{{ profile.twitter }}"><i class="fa fa-twitter"></i></a></li>{% endif %}
+          {% if profile.linkedin %}<li><a href="https://www.linkedin.com/in/{{ profile.linkedin }}"><i class="fa fa-linkedin"></i></a></li>{% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 {{ pull }} team-v7-img">
+    <img class="img-responsive full-width equal-height-column" src="/images/profiles/{{ profile.avatar_sidebar }}" alt="{{ profile.name }}">
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+
+<!--=== Team v5 ===-->
+<div class="bg-grey">
+<div class="container">
+  <div class="headline-center margin-bottom-60">
+    <h2>Meet the community</h2>
+    <p>Below are people from the <a href="{{ site.url }}/community/">Napalm community</a></p>
+  </div>
+
+
+{% assign wrapper = 1 %}
+{% for author in site.data.authors %}
+{% assign profile = author[1] %}
+{% assign profile_page = false %}
+{% for collection in site.collections %}
+ {% if collection.label == 'profiles' %}
+  {% for entry in collection.docs %}
+   {% assign ref_string = entry.path | split:"/" | last | split:"." | first %}
+   {% if profile.github == ref_string %}
+    {% assign profile_page = entry %}
+   {% endif %}
+  {% endfor %}
+ {% endif %}
+{% endfor %}
+
+{% unless profile.napalm_core %}
+    {% if wrapper == 1 %}
+    <div class="row team-v5 margin-bottom-30">
+    {% endif %}
+    <div class="col-sm-4 sm-margin-bottom-50">
+      <div class="team-img">
+        <img class="img-responsive" src="/images/profiles/{{ profile.avatar_sidebar }}" alt="{{ profile.name }}">
+        <div class="team-hover">
+          <ul class="list-inline team-social-v5">
+            {% if profile.uri %}<li><a href="{{ profile.uri }}"><i class="fa fa-home"></i></a></li>{% endif %}
+            {% if profile.github %}<li><a href="https://github.com/{{ profile.github }}"><i class="fa fa-github"></i></a></li>{% endif %}
+            {% if profile.twitter %}<li><a href="https://www.twitter.com/{{ profile.twitter }}"><i class="fa fa-twitter"></i></a></li>{% endif %}
+            {% if profile.linkedin %}<li><a href="https://www.linkedin.com/in/{{ profile.linkedin }}"><i class="fa fa-linkedin"></i></a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+      <span>{{ profile.name }}</span>
+      <small>{{ profile.title }}</small>
+      <p>{{ profile.bio }}</p>
+      {% if profile_page.url %}<p class="space-lg-hor"><a href="{{ site.url }}{{ profile_page.url }}"><button class="btn-u btn-u-orange" type="button">More info</button></a>{% endif %}
+    </div>
+    {% if wrapper == 1 %}
+    {% assign wrapper = 2 %}
+    {% elsif wrapper == 2 %}
+    {% assign wrapper = 3 %}
+    {% else %}
+    {% assign wrapper = 1 %}
+    </div><!--/end team v5-->
+    {% endif %}
+
+
+{% endunless %}
+{% endfor %}
+
+
+</div>
+</div>
+<!--=== End Team v5 ===-->
