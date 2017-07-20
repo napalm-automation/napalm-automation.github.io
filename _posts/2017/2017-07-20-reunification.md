@@ -73,7 +73,7 @@ As we want to make sure people has time to update their requirements file to pin
 RFC
 ===
 
-As previously stated, this is a rough plan, if you have concerns, comments, suggestions there a few ways you can reach to us to make them known:
+As previously stated, this is a rough plan, if you have concerns, comments, suggestions there are a few ways you can reach to us to make them known:
 
-1. We have create an [issue](https://github.com/napalm-automation/napalm/issues/392) on github.
-2. You can also reach us on slack. For details about how to reach us on slack visit the [community](/community) section.
+1. We have created an [issue](https://github.com/napalm-automation/napalm/issues/392) on github.
+2. You can also reach us on slack. Visit the [community](/community) section for more information about our slack channel.
