@@ -2,6 +2,7 @@
 dbarrosop:
   name        : "David Barroso"
   bio         : "Works at <a href='https://www.fastly.com/'>Fastly</a>"
+  title       : "Creator, Core Developer"
   avatar      : "dbarrosop-160x160.png"
   avatar_440  : "dbarrosop-440x440.png"
   avatar_sidebar      : "david-barroso-600x400.png"
@@ -14,9 +15,22 @@ dbarrosop:
 mirceaulinic:
   name        : "Mircea Ulinic"
   bio         : "Works at <a href='https://www.cloudflare.com/'>Cloudflare</a>"
+  title       : "Core Developer"
   avatar      : "mirceaulinic-160x160.png"
   avatar_440  : "mircea-398x398.jpeg"
   avatar_sidebar  : "mircea-398x398.jpeg"
   github      : "mirceaulinic"
   uri         : "https://mirceaulinic.net/"
   twitter     : "mirceaulinic"
+
+ogenstad:
+  name        : "Patrick Ogenstad"
+  bio         : "Works at <a href='https://www.conscia-netsafe.se/'>Conscia Netsafe</a>"
+  title       : "Contributor"
+  avatar      : "ogenstad-160x160.png"
+  avatar_440  : "ogenstad-600x400.jpg"
+  avatar_sidebar  : "ogenstad-600x400.jpg"
+  github      : "ogenstad"
+  linkedin    : "patrickogenstad"
+  uri         : "https://networklore.com/"
+  twitter     : "networklore"
