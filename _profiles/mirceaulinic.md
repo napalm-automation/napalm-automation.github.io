@@ -6,7 +6,7 @@ description: "About Mircea Ulinic"
 Mircea is a software engineer with a great passion for the telecom world,
 in particular for networking. He knows how a manycore processor works (and
 hands-on experience during his parallel computing research at EPFL),
-understands how a 4G network works, but he didn't have the chance yet to
+understands how a 4G network works, but he didn't have the chance to
 implement sudowires in a real network yet. Also, loves maths, physics and all
 the things everyone hates.
 
