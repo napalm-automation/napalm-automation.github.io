@@ -11,7 +11,7 @@ implement sudowires in a real network yet. Also, loves maths, physics and all
 the things everyone hates.
 
 He has massively contributed to the growth of NAPALM and has integrated it
-in Salt, making vendor-agnostic event-driven network-automation and
+in Salt, making vendor-agnostic event-driven network automation and
 orchestration easier. Now, he's also a maintainer and hopes to help everyone
 as much as possible.
 
