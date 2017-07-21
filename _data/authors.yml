@@ -15,13 +15,15 @@ dbarrosop:
 mirceaulinic:
   name        : "Mircea Ulinic"
   bio         : "Works at <a href='https://www.cloudflare.com/'>Cloudflare</a>"
-  title       : "Core Developer"
+  title       : "User, Core Developer, Integrator"
   avatar      : "mirceaulinic-160x160.png"
   avatar_440  : "mircea-398x398.jpeg"
   avatar_sidebar  : "mircea-398x398.jpeg"
   github      : "mirceaulinic"
   uri         : "https://mirceaulinic.net/"
   twitter     : "mirceaulinic"
+  linkedin    : "mirceaulinic"
+  email       : "ping@mirceaulinic.net"
 
 ogenstad:
   name        : "Patrick Ogenstad"
