@@ -17,6 +17,6 @@ orchestration easier. Now, he's also a maintainer and hopes to help everyone
 as much as possible.
 
 Sometimes he [blogs](https://mirceaulinic.net/) about networking, automation,
-how network vendors suck, but soon perhaps he'll find some more time to write
-about many other stuff, not necessarily networking-related only (coz life
-is so much more than that).
+how traditional network vendors suck, but soon perhaps he'll find some more time
+to write about many other stuff, not necessarily networking-related only (coz
+life is so much more than that).
