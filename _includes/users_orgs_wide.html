@@ -1,0 +1,41 @@
+<div >
+  <div class="headline-center">
+    <h2>Trusted By</h2>
+  </div>
+</div>
+
+
+
+<div class="cube-portfolio">
+
+  <div id="grid-container" class="cbp-l-grid-agency">
+
+{% for entry in site.data.user_orgs %}
+{% assign org = entry[1] %}
+
+    <div class="cbp-item graphic">
+      <div class="cbp-caption">
+        <div class="cbp-caption-defaultWrap">
+          <img src="/images/org_logos/{{ org.logo_whitespace_3x2 }}" alt="{{ org.name }}">
+        </div>
+        <div class="cbp-caption-activeWrap">
+          <div class="cbp-l-caption-alignCenter">
+            <div class="cbp-l-caption-body">
+              <ul class="link-captions">
+                {% if org.uri %}<li><a href="{{ org.uri }}"><i class="rounded-x fa fa-link"></i></a></li>{% endif %}
+              </ul>
+              <div class="cbp-l-grid-agency-title">{{ org.name }}</div>
+              <div class="cbp-l-grid-agency-desc">{{ org.about }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endfor %}
+
+
+
+  </div><!--/end Grid Container-->
+</div>
+<!--=== End Cube-Portfdlio ===-->
