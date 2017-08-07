@@ -1,5 +1,5 @@
 ---
-title: "napalm-ansible"
+title: "Summer updates for napalm-ansible"
 description: "Install napalm modules for ansible the easy way"
 tags: ["news", "ansible"]
 ---
