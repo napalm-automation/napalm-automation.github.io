@@ -1,0 +1,20 @@
+fastly:
+  name: Fastly
+  uri: https://www.fastly.com/
+  about: "Fastly's edge cloud platform powers fast, secure, and scalable digital experiences."
+  logo_3x2: fastly-900x600.jpg
+  logo_whitespace_3x2: fastly-whitespace-900x600.jpg
+
+linx:
+  name: "The London Internet Exchange"
+  uri: https://www.linx.net/
+  about: "The London Internet Exchange (LINX) is a global leader of Internet Exchange Points (IXP). Our company ethos and aspirations result in constant growth and improvement in our services."
+  logo_3x2: linx-900x600.jpg
+  logo_whitespace_3x2: linx-whitespace-900x600.jpg
+
+cloudflare:
+  name: Cloudflare
+  uri: https://www.cloudflare.com/
+  about: "At Cloudflare, we make the Internet work the way it should. Offering CDN, DNS, DDoS protection and security, find out how we can help your site."
+  logo_3x2: cloudflare-900x600.jpg
+  logo_whitespace_3x2: cloudflare-whitespace-900x600.jpg
