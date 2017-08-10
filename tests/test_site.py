@@ -24,6 +24,6 @@ def test_post_slug_word_count():
     site = _load_site()
     for entry in site:
         if site[entry]['content_type'] == 'post':
-            slug_words = site[entry]['content_type'].split('-')
+            slug_words = site[entry]['url'].split('-')
             if len(slug_words) < 3 and site[entry]['url'] not in ALLOWED_SHORT_SLUGS:
                 assert entry == "Slug has too few words"
