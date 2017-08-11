@@ -1,0 +1,44 @@
+<!-- Testimonials Wrap -->
+<div class="testimonials-v6 testimonials-wrap">
+  <div class="headline-center">
+    <h2>What people are saying</h2>
+    <p>People around the world are using Napalm to automate their networks.<br>
+      Below are some examples of what people think about the project.</p>
+  </div>
+
+
+{% assign wrapper = 1 %}
+{% for quote in site.data.user_testimonials %}
+{% if wrapper == 1 %}
+  <div class="row margin-bottom-50">
+{% endif %}
+
+    <div class="col-md-6 md-margin-bottom-50">
+      <div class="testimonials-info rounded-bottom bg-color-light">
+        {% if quote.avatar_square %}
+        <img class="rounded-x" src="/images/quotes/{{ quote.avatar_square }}" alt="{{ quote.name }}">
+        {% endif %}
+        <div class="testimonials-desc">
+          <p>"{{ quote.quote }}"</p>
+          <strong>{{ quote.name }}</strong>
+          {% if quote.title or quote.org %}
+          <span>{% if quote.title %}{{ quote.title }}{% endif %}{% if quote.title and quote.org %}, at {% endif %}{% if quote.org %}{{ quote.org }}{% endif %}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+{% if wrapper == 1 %}
+{% assign wrapper = 2 %}
+{% elsif wrapper == 2 %}
+{% assign wrapper = 1 %}
+</div>
+{% endif %}
+
+{% endfor %}
+
+{% if wrapper == 2 %}
+</div>
+{% endif %}
+
+</div>
+<!-- End Testimonials Wrap -->
