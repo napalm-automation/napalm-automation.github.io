@@ -1,6 +1,7 @@
 
 dbarrosop:
   name        : "David Barroso"
+  napalm_core : true
   bio         : "Works at <a href='https://www.fastly.com/'>Fastly</a>"
   title       : "Creator, Core Developer"
   avatar      : "dbarrosop-160x160.png"
@@ -14,6 +15,7 @@ dbarrosop:
 
 mirceaulinic:
   name        : "Mircea Ulinic"
+  napalm_core : true
   bio         : "Works at <a href='https://www.cloudflare.com/'>Cloudflare</a>"
   title       : "User, Core Developer, Integrator"
   avatar      : "mirceaulinic-160x160.png"
@@ -36,3 +38,86 @@ ogenstad:
   linkedin    : "patrickogenstad"
   uri         : "https://networklore.com/"
   twitter     : "networklore"
+
+ktbyers:
+  name        : "Kirk Byers"
+  bio         : "I am a CCIE (emeritus) in routing and switching and have extensive Python and Ansible experience. Since 2014, I have been teaching Python and Ansible to network engineers. I also wrote the Netmiko Python library and am a major contributor to NAPALM."
+  napalm_core : true
+  title       : "Core Developer"
+  avatar_sidebar      : "david-barroso-600x400.png"
+  github      : "ktbyers"
+  uri         : "http://pynet.twb-tech.com"
+  twitter     : "kirkbyers"
+
+sample1:
+  name        : "Some user"
+  napalm_core : false
+  bio         : "Does xyz"
+  title       : "Contributor"
+  avatar      : "dbarrosop-160x160.png"
+  avatar_440  : "dbarrosop-440x440.png"
+  avatar_sidebar      : "david-barroso-600x400.png"
+  uri         : "https://www.dravetech.com/"
+  twitter     : "dbarrosop"
+  linkedin    : "dbarrosop"
+
+sample2:
+  name        : "Other user"
+  napalm_core : false
+  bio         : "Does xyz"
+  title       : "Contributor"
+  avatar      : "dbarrosop-160x160.png"
+  avatar_440  : "dbarrosop-440x440.png"
+  avatar_sidebar      : "david-barroso-600x400.png"
+  uri         : "https://www.dravetech.com/"
+  twitter     : "dbarrosop"
+  linkedin    : "dbarrosop"
+
+
+sample3:
+  name        : "Joe Smith"
+  napalm_core : false
+  bio         : "Does xyz"
+  title       : "Contributor"
+  avatar      : "dbarrosop-160x160.png"
+  avatar_440  : "dbarrosop-440x440.png"
+  avatar_sidebar      : "david-barroso-600x400.png"
+  uri         : "https://www.dravetech.com/"
+  twitter     : "dbarrosop"
+  linkedin    : "dbarrosop"
+
+sample4:
+  name        : "Alice Williams"
+  napalm_core : false
+  bio         : "Does xyz"
+  title       : "Contributor"
+  avatar      : "dbarrosop-160x160.png"
+  avatar_440  : "dbarrosop-440x440.png"
+  avatar_sidebar      : "david-barroso-600x400.png"
+  uri         : "https://www.dravetech.com/"
+  twitter     : "dbarrosop"
+  linkedin    : "dbarrosop"
+
+sample5:
+  name        : "Alice Williams"
+  napalm_core : false
+  bio         : "Does xyz"
+  title       : "Contributor"
+  avatar      : "dbarrosop-160x160.png"
+  avatar_440  : "dbarrosop-440x440.png"
+  avatar_sidebar      : "david-barroso-600x400.png"
+  uri         : "https://www.dravetech.com/"
+  twitter     : "dbarrosop"
+  linkedin    : "dbarrosop"
+
+sample6:
+  name        : "Sara Lisbon"
+  napalm_core : false
+  bio         : "Does xyz"
+  title       : "Contributor"
+  avatar      : "dbarrosop-160x160.png"
+  avatar_440  : "dbarrosop-440x440.png"
+  avatar_sidebar      : "david-barroso-600x400.png"
+  uri         : "https://www.dravetech.com/"
+  twitter     : "dbarrosop"
+  linkedin    : "dbarrosop"
