@@ -18,3 +18,10 @@ cloudflare:
   about: "At Cloudflare, we make the Internet work the way it should. Offering CDN, DNS, DDoS protection and security, find out how we can help your site."
   logo_3x2: cloudflare-900x600.jpg
   logo_whitespace_3x2: cloudflare-whitespace-900x600.jpg
+
+digitalocean:
+  name: DigitalOcean
+  uri: https://www.digitalocean.com/
+  about: "DigitalOcean provides a software platform that makes it simple for developers to build, deploy and scale applications in the cloud."
+  logo_3x2: digitalocean-900x600.jpg
+  logo_whitespace_3x2: digitalocean-whitespace-900x600.jpg
