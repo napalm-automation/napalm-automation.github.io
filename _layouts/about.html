@@ -10,7 +10,6 @@ layout: default
   </div>
 </div>
 
-
 <!--=== Team v5 ===-->
 <div class="container">
   <div class="headline-center margin-bottom-60">
@@ -35,13 +34,14 @@ layout: default
 {% if profile.napalm_core %}
     <div class="col-sm-4 sm-margin-bottom-50">
       <div class="team-img">
-        <img class="img-responsive" src="/images/profiles/{{ profile.avatar_sidebar }}" alt="{{ profile.name }}">
+        <img class="img-responsive" src="/images/profiles/{{ profile.avatar_440 }}" alt="{{ profile.name }}">
         <div class="team-hover">
           <ul class="list-inline team-social-v5">
             {% if profile.uri %}<li><a href="{{ profile.uri }}"><i class="fa fa-home"></i></a></li>{% endif %}
             {% if profile.github %}<li><a href="https://github.com/{{ profile.github }}"><i class="fa fa-github"></i></a></li>{% endif %}
             {% if profile.twitter %}<li><a href="https://www.twitter.com/{{ profile.twitter }}"><i class="fa fa-twitter"></i></a></li>{% endif %}
             {% if profile.linkedin %}<li><a href="https://www.linkedin.com/in/{{ profile.linkedin }}"><i class="fa fa-linkedin"></i></a></li>{% endif %}
+            {% if profile.email %}<li><a href="mailto:{{ profile.email }}"><i class="fa fa-envelope"></i></a></li>{% endif %}
           </ul>
         </div>
       </div>
