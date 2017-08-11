@@ -11,7 +11,6 @@ dbarrosop:
   twitter     : "dbarrosop"
   linkedin    : "dbarrosop"
 
-
 mirceaulinic:
   name        : "Mircea Ulinic"
   bio         : "Works at <a href='https://www.cloudflare.com/'>Cloudflare</a>"
@@ -36,3 +35,15 @@ ogenstad:
   linkedin    : "patrickogenstad"
   uri         : "https://networklore.com/"
   twitter     : "networklore"
+  
+ktbyers:
+  name        : "Kirk Byers"
+  bio         : "Works at <a href='https://pynet.twb-tech.com'>Twin Bridges Technology</a>"
+  title       : "Develop (mainly napalm-ios and Python3)"
+  avatar      : "kirk-byers-160x160.png"
+  avatar_440  : "kirk-byers-440x440.png"
+  avatar_sidebar      : "kirk-byers-440x440.png"
+  uri         : "https://pynet.twb-tech.com"
+  github      : "ktbyers"
+  twitter     : "kirkbyers"
+  linkedin    : "ktbyers"
