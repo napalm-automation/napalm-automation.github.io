@@ -11,7 +11,7 @@ author:
   twitter          : napalm_auto
 
 paginate: 10 # amount of posts to show
-paginate_path: /news/page:num/
+paginate_path: /blog/page:num/
 
 # Conversion
 markdown: kramdown
