@@ -1,8 +1,6 @@
 <!-- Blog Sidebar -->
 <div class="col-md-3">
-
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+  {% if page.layout == "post" and page.author %}{% include author-profile.html %}{% endif %}
   {% include sidebar-latest_posts.html %}
-
 </div>
 <!-- End Blog Sidebar -->
