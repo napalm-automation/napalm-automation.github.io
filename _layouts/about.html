@@ -46,7 +46,9 @@ layout: default
         </div>
       </div>
       <span>{{ profile.name }}</span>
+      {% comment %}
       <small>{{ profile.title }}</small>
+      {% endcomment %}
       <p>{{ profile.bio }}</p>
       {% if profile_page.url %}<p class="space-lg-hor"><a href="{{ site.url }}{{ profile_page.url }}"><button class="btn-u btn-u-orange" type="button">More info</button></a>{% endif %}
     </div>
