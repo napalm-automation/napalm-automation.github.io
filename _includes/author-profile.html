@@ -9,7 +9,7 @@
 
 <div class="headline-v2"><h2>{{ author.name }}</h2></div>
 
-<div class="magazine-posts col-md-12 col-sm-6 margin-bottom-30">
+<div class="magazine-posts col-md-12 col-sm-6 margin-bottom-5">
   <div class="magazine-posts-img">
     <img class="img-responsive" src="/images/profiles/{{ author.avatar_sidebar }}" alt="{{ author.name }}">
   </div>
@@ -42,32 +42,32 @@
       </a>
     </li>
 {% endif %}
-
-
   </ul>
+
 </div>
 
 <!-- Latest Links -->
 <ul class="list-unstyled blog-latest-posts margin-bottom-50">
   <li>
-    <h3>About {{ author_firstname }}</h3>
     <p>{{ author.bio }}</p>
-    <p>Read more <a href="{{ site.url }}{{ profile.url }}">about {{ author_firstname }}</a></p>
+    {% if profile %}<p>Read more <a href="{{ site.url }}{{ profile.url }}">about {{ author_firstname }}</a></p>{%endif %}
   </li>
 </ul>
 <!-- End Latest Links -->
 
 {% assign author_posts = site.posts | where: "author", page.author %}
 {% assign author_post_count = author_posts | size %}
-{% if author_post_count > 0 %}
+{% if author_post_count > 1 %}
 <div class="headline-v2"><h2>Posts by {{ author_firstname }}</h2></div>
 <!-- Latest Links -->
 <ul class="list-unstyled blog-latest-posts margin-bottom-50">
   {% for post in author_posts limit:5 %}
+  {% if post.url != page.url %}
   <li>
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <small>{{ post.date | date: '%B %d, %Y' }}</small>
   </li>
+  {% endif %}
   {% endfor %}
 </ul>
 {% endif %}
