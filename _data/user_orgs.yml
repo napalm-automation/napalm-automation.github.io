@@ -25,3 +25,10 @@ digitalocean:
   about: "DigitalOcean provides a software platform that makes it simple for developers to build, deploy and scale applications in the cloud."
   logo_3x2: digitalocean-900x600.jpg
   logo_whitespace_3x2: digitalocean-whitespace-900x600.jpg
+
+linode:
+  name: Linode
+  uri: https://www.linode.com/
+  about: "Linode provides cloud hosting for you. Instantly deploy an SSD cloud server running with your choice of Linux distro, resources, and node location."
+  logo_3x2: linode-900x600.png
+  logo_whitespace_3x2: linode-whitespace-900x600.png
