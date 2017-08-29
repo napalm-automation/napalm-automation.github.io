@@ -10,3 +10,9 @@
   org: DigitalOcean
   quote: "Integrating NAPALM with NetBox has unlocked tremendous potential. We can click a button on the page and NAPALM will compare what it learns from a device to the data in NetBox, and we can immediately tell if an LLDP neighbor is missing or if a cable is out of place. It's a real force multiplier in network operations!"
   avatar_square: 'jstretch-160x160.jpg'
+
+- name: "Andrew Dampf"
+  title: "Network Engineer"
+  org: Linode
+  quote: "We use NAPALM on several projects at Linode and as a result, we were able to introduce a new vendor's equipment in our environment with almost no changes to our code base."
+  avatar_square: 'dampf-160x160.jpg'
