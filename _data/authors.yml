@@ -1,6 +1,7 @@
 
 dbarrosop:
   name        : "David Barroso"
+  napalm_core : true
   bio         : "Works at <a href='https://www.fastly.com/'>Fastly</a>"
   title       : "Creator, Core Developer"
   avatar      : "dbarrosop-160x160.png"
@@ -13,6 +14,7 @@ dbarrosop:
 
 mirceaulinic:
   name        : "Mircea Ulinic"
+  napalm_core : true
   bio         : "Works at <a href='https://www.cloudflare.com/'>Cloudflare</a>"
   title       : "User, Core Developer, Integrator"
   avatar      : "mirceaulinic-160x160.png"
@@ -35,9 +37,10 @@ ogenstad:
   linkedin    : "patrickogenstad"
   uri         : "https://networklore.com/"
   twitter     : "networklore"
-  
+
 ktbyers:
   name        : "Kirk Byers"
+  napalm_core : true
   bio         : "Works at <a href='https://pynet.twb-tech.com'>Twin Bridges Technology</a>"
   title       : "Develop (mainly napalm-ios and Python3)"
   avatar      : "kirk-byers-160x160.png"

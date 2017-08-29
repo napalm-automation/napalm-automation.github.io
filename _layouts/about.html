@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<div class="bg-grey">
+  <div class="container content-sm">
+    <div class="headline-center">
+      <h2 class="title-v2 title-center">About NAPALM</h2>
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+<!--=== Team v5 ===-->
+<div class="container">
+  <div class="headline-center margin-bottom-60">
+    <h2>Meet the core team</h2>
+  </div>
+
+  <div class="row team-v5 margin-bottom-30">
+{% for author in site.data.authors %}
+{% assign profile = author[1] %}
+{% assign profile_page = false %}
+{% for collection in site.collections %}
+ {% if collection.label == 'profiles' %}
+  {% for entry in collection.docs %}
+   {% assign ref_string = entry.path | split:"/" | last | split:"." | first %}
+   {% if profile.github == ref_string %}
+    {% assign profile_page = entry %}
+   {% endif %}
+  {% endfor %}
+ {% endif %}
+{% endfor %}
+
+{% if profile.napalm_core %}
+    <div class="col-sm-4 sm-margin-bottom-50">
+      <div class="team-img">
+        <img class="img-responsive" src="/images/profiles/{{ profile.avatar_440 }}" alt="{{ profile.name }}">
+        <div class="team-hover">
+          <ul class="list-inline team-social-v5">
+            {% if profile.uri %}<li><a href="{{ profile.uri }}"><i class="fa fa-home"></i></a></li>{% endif %}
+            {% if profile.github %}<li><a href="https://github.com/{{ profile.github }}"><i class="fa fa-github"></i></a></li>{% endif %}
+            {% if profile.twitter %}<li><a href="https://www.twitter.com/{{ profile.twitter }}"><i class="fa fa-twitter"></i></a></li>{% endif %}
+            {% if profile.linkedin %}<li><a href="https://www.linkedin.com/in/{{ profile.linkedin }}"><i class="fa fa-linkedin"></i></a></li>{% endif %}
+            {% if profile.email %}<li><a href="mailto:{{ profile.email }}"><i class="fa fa-envelope"></i></a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+      <span>{{ profile.name }}</span>
+      {% comment %}
+      <small>{{ profile.title }}</small>
+      {% endcomment %}
+      <p>{{ profile.bio }}</p>
+      {% if profile_page.url %}<p class="space-lg-hor"><a href="{{ site.url }}{{ profile_page.url }}"><button class="btn-u btn-u-orange" type="button">More info</button></a>{% endif %}
+    </div>
+
+{% endif %}
+{% endfor %}
+
+
+  </div><!--/end team v5-->
+</div>
+<!--=== End Team v5 ===-->
