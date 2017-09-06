@@ -164,7 +164,7 @@ notes, see [this document](http://napalm-logs.readthedocs.io/en/latest/installat
 ## How to start napalm-logs
 
 In the [main documentation](http://napalm-logs.readthedocs.io/en/latest/index.html)
-we have explain briefly what are the ways to get started with -- you firstly
+we have explain briefly what are the ways to get started -- you firstly
 need to determine if you *really* want to disable the security.
 
 The easiest example to start with is the following:
@@ -173,7 +173,7 @@ The easiest example to start with is the following:
 $ sudo napalm-logs --publisher cli --disable-security
 ```
 
-The above is hihly discouraged in production environments, as it disables
+The above is highly discouraged in production environments, as it disables
 the security and just prints the objects on the command line; but this is a good
 way to check that the process is running correctly and receiving syslog messages.
 By default it is listening on the standard syslog UDP port ``514`` (hence the
@@ -308,7 +308,7 @@ sends state information. They can both co-exist and provide important informatio
 
 ## Conclusion
 
-Every network tend to produce millions of syslog messages per hour. We believe
+All networks tend to produce millions of syslog messages per hour. We believe
 that it's vital to consider this information and act according to the business
 requirements. At times, the syslog messages can be critical for your infrastructure:
 applying automatic configurating changes when, for example, a BGP neighbor is
