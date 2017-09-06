@@ -16,6 +16,8 @@ shape. Unlike the rest of the libraries maintained by the NAPALM automation
 community, *napalm-logs* does not connect to the device to retrieve information,
 but rather receives messages.
 
+<!--more-->
+
 The messages are received either directly from the network device, via UDP or TCP,
 or indirectly, using brokers such as [Kafka](https://kafka.apache.org/),
 [ZeroMQ](http://zeromq.org/), or other external systems. This is called
@@ -185,7 +187,7 @@ The list of configuration options can grow significantly, although they can be
 equally specified on the command line when starting the daemon, it is preferable
 to add them into a configuration file (default: ``/etc/napalm/logs``):
 
-```/etc/napalm/logs```
+``/etc/napalm/logs``
 
 ```yaml
 address: 172.17.17.1
@@ -320,6 +322,6 @@ This is just the very beginning of event-driven network automation and
 orchestration. As with any open source software we welcome your ideas, bug
 reports, bug fixes, improvements, feature additions or modules for one of the
 pluggable interfaces - we already have a
-[bounch of ideas](https://github.com/napalm-automation/napalm-logs/issues)
+[bunch of ideas](https://github.com/napalm-automation/napalm-logs/issues)
 for the future releases. Documentation improvements are equally important and
 we will be happy to merge your pull requests!
