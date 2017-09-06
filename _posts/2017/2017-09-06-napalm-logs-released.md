@@ -10,15 +10,15 @@ release of [*napalm-logs*](https://github.com/napalm-automation/napalm-logs).
 
 # What is napalm-logs
 
-*napalm-logs* is an open source software acting as a daemon listening for
-syslog messages from network systems and normalizes them in a vendor-agnostic
-shape. Unlike the rest of the libraries maintained by the NAPALM Automation
+*napalm-logs* is open source software acting as a daemon, which listens for
+syslog messages from network devices and normalizes them into a vendor-agnostic
+shape. Unlike the rest of the libraries maintained by the NAPALM automation
 community, *napalm-logs* does not connect to the device to retrieve information,
-but it continuously receives messages.
+but rather receives messages.
 
 The messages are received either directly from the network device, via UDP or TCP,
 or indirectly, using brokers such as [Kafka](https://kafka.apache.org/),
-[ZeroMQ](http://zeromq.org/), or different other external systems. This is called
+[ZeroMQ](http://zeromq.org/), or other external systems. This is called
 the *listener* interface and it is pluggable, meaning that the user can easily
 extend its capabilities and facilitate the reception of the syslog messages from
 various different sources.
@@ -26,7 +26,7 @@ various different sources.
 As we know very well, the syslog messages are simply bulks of text and they don't
 have the same format or structure across the network operating systems, though
 they do share something essential: a notification. This is the way the network
-device is trying to communicate with you and inform you regarding an event.
+device tries to communicate with you and inform you of an event.
 
 For example, the following syslog message is a notification received from a
 Juniper device, when a BGP neighbor a number of prefixes above the threshold,
@@ -107,7 +107,7 @@ YANG model.
 To see the complete list of available notification IDs, please check
 the [official documentation](http://napalm-logs.readthedocs.io/en/latest/messages/index.html).
 
-``facility`` & ``severity``: looking at the raw messages from above, they start
+``facility`` & ``severity``: looking at the above raw messages, they start
 with ``<149>``. That is *the PRI part* (see
 [RFC 3164, &para;4.1.1](https://www.ietf.org/rfc/rfc3164.txt)). The PRI is a
 code that represents the *facility* and the *severify*. The severity can have
@@ -115,8 +115,8 @@ a value between 0 (i.e., *emergency: system is unusable*) and 7 (i.e.,
 *debug-level messages*). The facility, on the other hand is usually standardised
 as well, but there are also some vendor/platform specifics. For more information
 read [this document](https://www.balabit.com/documents/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html/bsdsyslog-pri.html).
-In our examples, the severity 5 means *Notice: normal but significant condition*,
-while the facility 18 corresponds to BGP.
+In our examples, severity level 5 means *Notice: normal but significant condition*,
+while facility number 18 corresponds to BGP.
 
 ``host``: is extracted from the syslog message, it represents the hostname of the
 network device.
