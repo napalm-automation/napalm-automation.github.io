@@ -320,6 +320,6 @@ This is just the very beginning of event-driven network automation and
 orchestration. As with any open source software we welcome your ideas, bug
 reports, bug fixes, improvements, feature additions or modules for one of the
 pluggable interfaces - we already have a
-[bounch of ideas](https://github.com/napalm-automation/napalm-logs/issues)
+[bunch of ideas](https://github.com/napalm-automation/napalm-logs/issues)
 for the future releases. Documentation improvements are equally important and
 we will be happy to merge your pull requests!
