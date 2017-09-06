@@ -23,27 +23,28 @@ the *listener* interface and it is pluggable, meaning that the user can easily
 extend its capabilities and facilitate the reception of the syslog messages from
 various different sources.
 
-As we know very well, the syslog messages are simply bulks of text and they don't
-have the same format or structure across the network operating systems, though
-they do share something essential: a notification. This is the way the network
-device tries to communicate with you and inform you of an event.
+syslog messages are simple chunks of text which don't confirm to the same format
+or structure across network operating systems. syslogs do however have something
+in common, they are notifications of events occurring on the device. This is the
+way the network device communicates back about what is going on.
 
 For example, the following syslog message is a notification received from a
-Juniper device, when a BGP neighbor a number of prefixes above the threshold,
-and the neighbor has been torn down:
+Juniper device. The event occurring is a bgp neighbor receiving more prefixes
+than is configured to be allowed, once the threshold is breached the neighbor
+has been torn down:
 
 ```text
 <149>Jun 21 14:03:12  vmx01 rpd[2902]: BGP_PREFIX_THRESH_EXCEEDED: 192.168.140.254 (External AS 4230): Configured maximum prefix-limit threshold(140) exceeded for inet4-unicast nlri: 141 (instance master)
 ```
 
-A similar notification, from an IOS-XR device, has a totally different form,
+A similar notification, from a Cisco IOS-XR device, has a totally different form,
 but the device is communicating exactly the same notification:
 
 ```text
 <149>2647599: xrv01 RP/0/RSP1/CPU0:Mar 28 15:08:30.941 UTC: bgp[1051]: %ROUTING-BGP-5-MAXPFX : No. of IPv4 Unicast prefixes received from 192.168.140.254 has reached 94106, max 12500
 ```
 
-The same notification from a Cisco Nexus, or Arista EOS, and so on, has a
+The same notification from a Cisco NXOS, or Arista EOS device, and so on, has a
 different structure, although the device is sending the same
 information.
 
@@ -95,16 +96,16 @@ structured data, e.g.:
 }
 ```
 
-Now, let's analyse each field from the document above:
+Now, let's analyse each field from the snippet above:
 
-``yang_model``: simply names the YANG model that is used the standardize the
+``yang_model``: simply names the YANG model that is used to standardize the
 outgoing document. In the previous example, its value is ``openconfig-bgp``
-which means that the hierarchy respects the hierarchy defined in the
+which means that the hierarchy respects the defined hierarchy from the
 [openconfig-bgp](http://ops.openconfig.net/branches/master/docs/openconfig-bgp.html)
 YANG model.
 
-``error``: is a cross-platform unique identification name of the notification.
-To see the complete list of available notification IDs, please check
+``error``: is a cross-platform unique identifier of the notification.
+To see the complete list of available notification identifiers, please check
 the [official documentation](http://napalm-logs.readthedocs.io/en/latest/messages/index.html).
 
 ``facility`` & ``severity``: looking at the above raw messages, they start
@@ -121,32 +122,32 @@ while facility number 18 corresponds to BGP.
 ``host``: is extracted from the syslog message, it represents the hostname of the
 network device.
 
-``ip``: the IP address we have received the message from.
+``ip``: the IP address the device the message was recevied from.
 
 ``os``: is the name of the network operating system identified from the syslog
 message format.
 
-``timestamp`` is the UTC timestamp when the syslog message has been generated
-(not when received!).
+``timestamp`` is the UTC timestamp of wen the syslog message was generated, not
+when received from the device.
 
 ## Where are these messages available
 
 These structured messages are then published over various systems such as ZeroMQ
-(used by default), Kafka, etc. Similarly to the *listener* interface, the
+(used by default), Kafka, et al. Similarly to the *listener* interface, the
 *publisher* interface is equally pluggable and the community can always contribute
-to extend the list of available transports.
+to extend the list of available transport.
 
 The outgoing messages are binary serialized using [MessagePack](http://msgpack.org/)
 and can be consumed using multiple clients.
 
 Considering that the napalm-logs messages can be used for event-driven automation
-and eventually trigger completely automatic configuration changes, we must enure
-the authenticity of the messages. For this reason, napalm-logs has been designed
-with security in mind, and the serialized data is encrypted and signed before
-being published. With these said, the user must ensure that the client
-connecting to napalm-logs' publisher interface to be designed with the ability
-to decrypt and check the signature of the read messages. For more details and
-learn how to easily implement the security on the client side, have a look at the
+and eventually trigger completely automatic configuration changes, we must ensure
+the authenticity of the messages. For this reason napalm-logs has been designed
+with security in mind, the serialized data is encrypted and signed before
+being published. With that said, the user must also ensure the client connecting
+to napalm-logs' publisher interface is designed with the ability to decrypt and
+check the signature of the received messages. For more details on  how to easily
+implement the security on the client side, have a look at the
 [Client Authentication](http://napalm-logs.readthedocs.io/en/latest/authentication/index.html).
 
 ## Installation
@@ -164,8 +165,8 @@ notes, see [this document](http://napalm-logs.readthedocs.io/en/latest/installat
 ## How to start napalm-logs
 
 In the [main documentation](http://napalm-logs.readthedocs.io/en/latest/index.html)
-we have explain briefly what are the ways to get started -- you firstly
-need to determine if you *really* want to disable the security.
+we explain briefly the ways to get started. You first need to determine if you
+*really* want to disable security.
 
 The easiest example to start with is the following:
 
@@ -174,15 +175,15 @@ $ sudo napalm-logs --publisher cli --disable-security
 ```
 
 The above is highly discouraged in production environments, as it disables
-the security and just prints the objects on the command line; but this is a good
-way to check that the process is running correctly and receiving syslog messages.
-By default it is listening on the standard syslog UDP port ``514`` (hence the
-need to start it with ``sudo``). To use a different port, you cah use the
-[``port`` configuration option](http://napalm-logs.readthedocs.io/en/latest/options/index.html#port).
+the security and just prints the objects on the command line; this is however a
+good way to check that the process is running correctly and receiving syslog
+messages. By default it is listening on the standard syslog UDP port ``514``
+(hence the need to start it with ``sudo``). To use a different port, you can use
+the [``port`` configuration option](http://napalm-logs.readthedocs.io/en/latest/options/index.html#port).
 
-As the list of configuration options can grow significanly, although they can be
-equally specified on the command line when starting the daemon, it is preferrable
-to add them into a file (default: ``/etc/napalm/logs``):
+The list of configuration options can grow significantly, although they can be
+equally specified on the command line when starting the daemon, it is preferable
+to add them into a configuration file (default: ``/etc/napalm/logs``):
 
 ```/etc/napalm/logs```
 
@@ -195,7 +196,7 @@ publish_port: 49017
 transport: zmq
 ```
 
-And start the program as: ```$ napalm-logs -c /etc/napalm/logs```. The config
+Start the program with: ```$ napalm-logs -c /etc/napalm/logs```. The config
 above will be listening to syslog messages over UDP at ``172.17.17.1:5514``, and
 will be publishing the structured messages, without encryption, over ZeroMQ
 at ``172.17.17.2:49017``.
@@ -206,7 +207,7 @@ It has been implemented to be suitable for various topologies, including, for
 example:
 
 - *napalm-logs* listening close to the network devices, e.g., one instance per PoP, or datacenter.
-- Playing the role of a central collector (if you are entirely sure that nobody will spoof, replay etc, the UDP messages between the networ devices and napalm-logs).
+- Playing the role of a central collector (if you are entirely sure that nobody will spoof, replay etc, the UDP messages between the network devices and napalm-logs).
 - A load-balanced central collector, meaning that you can start many processes.
 - The network devices sending the raw syslog messages to brokers such as Apache Kafka and *napalm-logs* processing them by subscribing to a dedicated topic.
 
@@ -214,23 +215,23 @@ There are no design constraints and you can run as many instances as you want.
 
 ## How to consume the napalm-logs messages
 
-There are almost unlimited ways to connect to the publisher interface, it mainly
-depends on the application and the topology you choose to implement. The most
-straight forward is having one *napalm-logs* instance and one (or more) clients
-subscribing to the ZeroMQ bus -- we have added an example like that
-[here](http://napalm-logs.readthedocs.io/en/latest/authentication/index.html),
+There are almost an unlimited number of ways to connect to the publisher
+interface, it mostly depends on the application and the topology you choose to
+implement. The most straight forward way is having one *napalm-logs* instance
+and one (or more) clients subscribing to the ZeroMQ bus -- we have added an
+example like that [here](http://napalm-logs.readthedocs.io/en/latest/authentication/index.html),
 the source code being also available
 [on GitHub](https://github.com/napalm-automation/napalm-logs/blob/master/examples/client_auth.py).
 
 ## The napalm-syslog Salt engine
 
-The capabilities of napalm-logs are directly exploited in Salt, beggining
-with the *Nitrogen* release - see
+The capabilities of napalm-logs are directly exploited in Salt, beginning with
+the *Nitrogen* release - see
 [the release notes](https://docs.saltstack.com/en/latest/topics/releases/2017.7.0.html#network-automation).
 By configuring the [*napalm-syslog*](https://docs.saltstack.com/en/latest/ref/engines/all/salt.engines.napalm_syslog.html#module-salt.engines.napalm_syslog)
 Salt engine, we can import the structured messages directly into the Salt event bus.
 
-The configuration is simple: once we have the *napalm-logs* daemon running,
+The configuration is simple: once you have the *napalm-logs* daemon running,
 the *napalm-syslog* Salt engine requires the configuration of the options
 documented [here](https://docs.saltstack.com/en/latest/ref/engines/all/salt.engines.napalm_syslog.html#salt.engines.napalm_syslog.start).
 
@@ -248,7 +249,7 @@ One detail to note is that the ``address`` and ``port`` options on the Salt
 engine side correspond to the ``publish_address`` and ``publish_port`` from
 *napalm-logs*.
 
-Once eveything is working fine, we should see events with the following structure
+Once everything is working, we should see events with the following structure
 on the Salt event bus:
 
 ```json
@@ -302,24 +303,23 @@ elegant way to automate your infrastructure and understand better your network.
 
 ## Streaming Telemetry vs. napalm-logs
 
-This software does not aim to provide an alternative to the Steaming Telemetry:
+This software does not aim to provide an alternative to the steaming telemetry:
 while napalm-logs normalises simple and very specific notifications, telemetry
 sends state information. They can both co-exist and provide important information.
 
 ## Conclusion
 
-All networks tend to produce millions of syslog messages per hour. We believe
-that it's vital to consider this information and act according to the business
+Any network can produce millions of syslog messages per hour. We believe
+that it's vital to consider this information and act according to business
 requirements. At times, the syslog messages can be critical for your infrastructure:
-applying automatic configurating changes when, for example, a BGP neighbor is
+applying automatic configuration changes when, for example, a BGP neighbor is
 leaking their entire routing table might be the key to maintain your network
-reliable and stable; *napalm-logs* is an even more important ally in
-multi-platform environments.
+stability; *napalm-logs* is an important ally in multi-platform environments.
 
 This is just the very beginning of event-driven network automation and
 orchestration. As with any open source software we welcome your ideas, bug
 reports, bug fixes, improvements, feature additions or modules for one of the
 pluggable interfaces - we already have a
-[bunch of ideas](https://github.com/napalm-automation/napalm-logs/issues)
+[bounch of ideas](https://github.com/napalm-automation/napalm-logs/issues)
 for the future releases. Documentation improvements are equally important and
 we will be happy to merge your pull requests!
