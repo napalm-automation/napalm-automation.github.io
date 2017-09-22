@@ -50,3 +50,15 @@ ktbyers:
   github      : "ktbyers"
   twitter     : "kirkbyers"
   linkedin    : "ktbyers"
+
+ubaumann:
+  name        : "Urs Baumann"
+  bio         : "Works at <a href='https://www.ins.hsr.ch/'>INS</a>"
+  title       : "Contributor"
+  avatar      : "ubaumann-160x160.png"
+  avatar_440  : "ubaumann-440x440.png"
+  avatar_sidebar      : "ubaumann-440x440.png"
+  uri         : "https://www.ubaumann.ch/"
+  github      : "ubaumann"
+  twitter     : "ubaumann_ch"
+  linkedin    : "ubaumannch"
