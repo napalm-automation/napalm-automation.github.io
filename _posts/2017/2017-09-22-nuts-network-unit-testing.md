@@ -61,7 +61,7 @@ phones couldn't renew the DHCP release. I don't know how, but we lost one SVI of
 Our findings of this change were: a better testing strategy is needed. The optimal way to solve the current
 problem was an automated unit testing for the network environment.
 
-![simple testing topology]({{ site.url }}/images/2017/2017-09-22-nuts.png)
+![simple testing topology]({{ site.url }}/images/2017/nuts-network-unit-testing-overview.png)
 
 # Bachelor Thesis
 
