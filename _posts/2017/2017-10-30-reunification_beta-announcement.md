@@ -1,5 +1,5 @@
 ---
-title: "Reunification beta 1"
+title: "Reunification beta announcement"
 author: dbarrosop
 description: "New napalm with all the unified drivers is in beta. Come and check it out."
 tags: ["news"]
@@ -10,8 +10,6 @@ As we announced in a [previous post](/reunification/) we have unified all of our
 ```
 pip install --pre napalm  # --pre is only necessary while this is in beta
 ```
-
-A continuation some useful notes.
 
 <!--more-->
 
