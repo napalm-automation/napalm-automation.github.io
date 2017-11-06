@@ -1,7 +1,7 @@
 ---
 title: "Reunification first release announcement"
 author: dbarrosop
-description: "New napalm with all the unified drivers is now officially here. Come and check it out."
+description: "New napalm with all the core drivers is now officially here. Come and check it out."
 tags: ["news"]
 ---
 
