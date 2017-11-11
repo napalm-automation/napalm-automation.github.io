@@ -1,0 +1,21 @@
+---
+- name: napalm
+  github: https://github.com/napalm-automation/napalm/
+  docs: https://napalm.readthedocs.io/en/latest/
+  logo: https://raw.githubusercontent.com/napalm-automation/napalm/develop/docs/_static/logo.png
+  description: |
+      NAPALM (Network Automation and Programmability Abstraction Layer with Multivendor support) is a Python library that implements a set of functions to interact with different network device Operating Systems using a unified API.
+
+      NAPALM supports several methods to connect to the devices, to manipulate configurations or to retrieve data.
+- name: napalm-logs
+  github: https://github.com/napalm-automation/napalm-logs/
+  docs: https://napalm-logs.readthedocs.io/en/latest/
+  logo: https://github.com/napalm-automation/napalm-logs/raw/master/logo.png
+  description: |
+      napalm-logs is a Python library that listens to syslog messages from network devices and returns strucuted data following the OpenConfig or IETF YANG models.
+- name: napalm-yang
+  github: https://github.com/napalm-automation/napalm-yang/
+  docs: https://napalm-yang.readthedocs.io/en/latest/
+  logo: https://raw.githubusercontent.com/napalm-automation/napalm-yang/develop/docs/napalm-yang.png
+  description: |
+      YANG (RFC6020) is a data modelling language, it’s a way of defining how data is supposed to look like. The napalm-yang library provides a framework to use models defined with YANG in the context of network management. It provides mechanisms to transform native data/config into YANG and vice versa.

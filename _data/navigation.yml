@@ -7,5 +7,5 @@ primary:
     url: /blog/
   - title: Community
     url: /community/
-  - title: Docs
-    url: https://napalm.readthedocs.io
+  - title: Projects
+    url: /projects/
