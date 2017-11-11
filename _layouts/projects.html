@@ -1,37 +1,36 @@
 ---
 layout: default
 ---
-<div class="bg-grey">
-  <div class="container content-sm">
-    <div class="headline-center">
-      {{ content }}
-    </div>
-  </div>
-</div>
 
-<!--=== Projects v1 ===-->
-<div class="container">
-  <div class="headline-center margin-bottom-60">
-    <h2>Projects</h2>
-  </div>
-
-  <div class="row project-v1 margin-bottom-30">
+<div class="container content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="headline"><h2>Our Projects</h2></div>
 {% for project in site.data.projects %}
-    <div class="headline-center margin-bottom-60">
-      <h2>{{ project.name }}</h2>
-    </div>
-    <div>
-      <img class="img-responsive" src="{{ project.logo }}" alt="{{ project.name }}" width="200px">
-      <a href="{{ project.github }}"><img src="http://jaisenmathai.com/assets/home/img/icon-github.svg" width="40px" alt="github"</a>
-      <a href="{{ project.docs }}"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/3688-200.png" width="40px" alt="docs"</a>
-    </div>
 
-    <div>
-      {{ project.description }}
-    </div>
+      <!-- Clients Block-->
+      <div class="row clients-page">
+        <div class="col-md-2">
+          <img src="{{ project.logo }}" class="img-responsive hover-effect" alt="{{ project.name }}" />
+        </div>
+        <div class="col-md-10">
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          <ul class="list-inline">
+            <li><a href="{{ project.github }}"><i class="fa fa-github"></i> Source Code</li>
+            <li><a href="{{ project.docs }}"><i class="fa fa-book"></i> Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <!-- End Clients Block-->
 {% endfor %}
 
+    </div><!--/col-md-12-->
 
-  </div><!--/end project v1-->
-</div>
-<!--=== End Team v1 ===-->
+
+
+
+  </div><!--/row-->
+</div><!--/container-->
+<!--=== End Content Part ===-->
