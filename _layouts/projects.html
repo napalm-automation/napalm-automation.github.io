@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="bg-grey">
+  <div class="container content-sm">
+    <div class="headline-center">
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+<!--=== Projects v1 ===-->
+<div class="container">
+  <div class="headline-center margin-bottom-60">
+    <h2>Projects</h2>
+  </div>
+
+  <div class="row project-v1 margin-bottom-30">
+{% for project in site.data.projects %}
+    <div class="headline-center margin-bottom-60">
+      <h2>{{ project.name }}</h2>
+    </div>
+    <div>
+      <img class="img-responsive" src="{{ project.logo }}" alt="{{ project.name }}" width="200px">
+      <a href="{{ project.github }}"><img src="http://jaisenmathai.com/assets/home/img/icon-github.svg" width="40px" alt="github"</a>
+      <a href="{{ project.docs }}"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/3688-200.png" width="40px" alt="docs"</a>
+    </div>
+
+    <div>
+      {{ project.description }}
+    </div>
+{% endfor %}
+
+
+  </div><!--/end project v1-->
+</div>
+<!--=== End Team v1 ===-->
