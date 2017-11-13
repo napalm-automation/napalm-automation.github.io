@@ -19,7 +19,7 @@ Be nice, respectful and have fun!
 **All times are in UTC**
 
 * Friday
-  * 4.00 pm ~ 7.00pm Kick Off
+  * 5.00 pm ~ 7.30pm Kick Off
     * [Kirk Byers](/ktbyers) - NAPALM update
     * [Mircea Ulinic](/mirceaulinic) - napalm-logs
     * [David Barroso](/dbarrosop) - Openconfig with napalm-yang
@@ -56,5 +56,4 @@ We will deliberate during Monday and Tuesday and probably write an announcement 
 
 ### What?
 
-@andrew on behalf of [Linode](https://www.linode.com) is donating a year of service for the winner :)
-
+[Andrew Dampf](https://www.linkedin.com/in/andrew-dampf-1237a418/) on behalf of [Linode](https://www.linode.com) is donating a year of service for the winner :)
