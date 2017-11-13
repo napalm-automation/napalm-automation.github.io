@@ -8,7 +8,7 @@ tags: ["news"]
 
 ## Intro
 
-It's been a year since our last hackathon so it's time for a second take. This year, in addition to giving you a NAPALM update and present a couple of new projects, we will also have a few talks from various other projects leveraging on napalm and a talk from Gabriele Gergino who was the unofficial winner for the non-existent contest we had in the hackathon we held last year :)
+It's been a year since our last hackathon so it's time for a second take. This year, in addition to giving you a NAPALM update and present a couple of new projects, we will also have a few talks from various other projects leveraging on napalm and a talk from Gabriele Gerbino who was the unofficial winner for the non-existent contest we had in the hackathon we held last year :)
 
 ## Code of Conduct
 
@@ -21,9 +21,9 @@ Be nice, respectful and have fun!
 * Friday
   * 4.00 pm ~ 7.00pm Kick Off
     * [Kirk Byers](/ktbyers) - NAPALM update
-    * [Mircea Ulinic](/mirceaulinic) - TBD
+    * [Mircea Ulinic](/mirceaulinic) - napalm-logs
     * [David Barroso](/dbarrosop) - Openconfig with napalm-yang
-    * [Gabriele Gerbino]() - Hackathon project 2016: napalm validate
+    * [Gabriele Gerbino](https://projectme10.wordpress.com) - Hackathon project 2016: napalm validate
     * [Matt Oswalt]() - TBD
     * [Urs Baumann]() - TBD
 * Saturday
