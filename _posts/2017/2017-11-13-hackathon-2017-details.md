@@ -18,7 +18,7 @@ Be nice, respectful and have fun!
 
 **All times are in UTC**
 
-* Friday
+* Friday - November 17 2017
   * 5.00 pm ~ 7.30pm Kick Off
     * [Kirk Byers](/ktbyers) - NAPALM update
     * [Mircea Ulinic](/mirceaulinic) - napalm-logs
