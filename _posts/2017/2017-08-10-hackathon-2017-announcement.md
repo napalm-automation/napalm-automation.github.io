@@ -8,7 +8,7 @@ Last year around November we organized our very first NAPALM hackathon. To be ho
 
 As the project continues growing and we get more and more people interested in it we thought it was about time to organize a second edition of the hackathon. The plan is to gather online during the weekend of the 17th of November, have a few presentations and hack at will.
 
-* **When**: From November 17th 4.00pm UTC to November 19th 7.00pm UTC
+* **When**: From November 17th 5.00pm UTC to November 19th 7.00pm UTC
 * **Where**: [slack](https://networktocode.herokuapp.com/)``#napalm-hackathon-2017`` (channel is already open so feel free to join)
 * **Who**: No matter who you are, your skills or your level of expertise, you are invited to join us. We will gladly help you dealing with the idiosyncrasies of git, python or those network operating systems we all love to hate.
 * **What**: Whatever you want. Feel free to show up with your own project and work solo or with someone else, to work on existing issues or to ask if someone wants help. We will also try to highlight existing issues or ideas we think are cool and useful so you have something to chose from.
