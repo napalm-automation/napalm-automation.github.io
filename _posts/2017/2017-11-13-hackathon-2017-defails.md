@@ -24,8 +24,8 @@ Be nice, respectful and have fun!
     * [Mircea Ulinic](/mirceaulinic) - napalm-logs
     * [David Barroso](/dbarrosop) - Openconfig with napalm-yang
     * [Gabriele Gerbino](https://projectme10.wordpress.com) - Hackathon project 2016: napalm validate
-    * [Matt Oswalt]() - TBD
-    * [Urs Baumann]() - TBD
+    * [Matt Oswalt]() - stackstorm + napalm
+    * [Urs Baumann]() - nuts
 * Saturday
   * Hacking
 * Sunday
