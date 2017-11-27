@@ -19,4 +19,8 @@ A continuation I want to highlight some of the projects people worked on:
 
 In addition there were many bugfixes and minor enhancements so big kudos to all those contributors that keep squashing bugs making automation more stable and reliable to everybody.
 
-In summary, it was a lot of fun and lots of things happened. It's also interesting to see new and interesting projects being built on top of napalm. For that reason I'd like to proclaim [e-napalm](https://github.com/afourmy/e-napalm) as the winner of the hackathon. It's been hard because there has been really good contributions that will make a difference for everybody but I am hoping ``e-napalm`` will help bootstrapping automation to people that might still be afraid of python.
+In summary, it was a lot of fun and lots of things happened. It's also interesting to see new and interesting projects being built on top of napalm.
+
+Winner: We'd like to thank all the contributors for helping out and for participating but as we announced previously we actually have a prize for one of them and we'd like you to help us decide who to give it to. So, please, head to this [github issue](https://github.com/napalm-automation/hackathon-2017/issues/18) and help us deciding. Next week's Monday we will close the polls and announce the winner.
+
+Thank you all again and happy automation!
