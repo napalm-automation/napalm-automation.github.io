@@ -11,6 +11,10 @@ The idea was to provide a way to use netmiko and napalm for those who don't have
 After a few weeks, I decided to start all over from scratch and created a whole new project designed to be a Network Management System focused on network visualization and automation: **eNMS**.
 
 **You can find a demo of eNMS _[here](http://afourmy.pythonanywhere.com/)_ !**
+```
+Username: cisco
+Password: cisco
+```
 
 In this post, I will start by briefly introducing eNMS network automation features, then show with some practical video examples of Netmiko and NAPALM automation on a Cisco 1841 (IOS) with eNMS.
 
