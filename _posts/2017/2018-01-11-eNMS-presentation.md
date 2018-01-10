@@ -9,9 +9,10 @@ During the Hackathon, I worked on eNAPALM, a simple web interface to Netmiko and
 The idea was to provide a way to use netmiko and napalm for those who don't have any Python or Ansible knowledge.
 
 After a few weeks, I decided to start all over from scratch and created a whole new project designed to be a Network Management System focused on network visualization and automation: **eNMS**.
-**You can find a demo of eNMS _[here](http://afourmy.pythonanywhere.com/)_ !**.
 
-In this post, I will start by briefly introducing eNMS network automation functions and technical stack, then show with some practical video examples of Netmiko and NAPALM automation on a Cisco 1841 (IOS) with eNMS.
+**You can find a demo of eNMS _[here](http://afourmy.pythonanywhere.com/)_ !**
+
+In this post, I will start by briefly introducing eNMS network automation features, then show with some practical video examples of Netmiko and NAPALM automation on a Cisco 1841 (IOS) with eNMS.
 
 # eNMS network automation features
 
@@ -19,28 +20,17 @@ In this post, I will start by briefly introducing eNMS network automation functi
 
 There are four types of task in eNMS:
 - **Netmiko _configuration_ task**: list of commands to configure the device (plain text or Jinja2 template).
-- **Netmiko _show commands_ task**: list of “show commands” which output will be displayed in the task logs.
+- **Netmiko _show commands_ task**: list of “show commands” which output is displayed in the task logs.
 - **NAPALM _configuration_ task**: partial or full configuration (plain text or Jinja2 template).
-- **NAPALM _getters_**: list of getters which output will be displayed in the task logs.
+- **NAPALM _getters_**: list of getters which output is displayed in the task logs.
+
 For all tasks, the user can choose one or more target devices.
 
 ## Task scheduling
 
 eNMS also provides some scheduling functions:
-- **Start date**: instead of running the task immediately, the task will start at a specific time.
-- **Frequency**: the task will be run periodically. This is especially useful for tasks that pull some information from the device, i.e netmiko **_show commands_** / **_NAPALM getters_** tasks.
-
-# eNMS technical stack
-
-## Back-end
-
-- Web framework: Flask
-- Database: SQLAlchemy / SQLite (possible migration to PostgreSQL soon)
-- Task scheduling: AP Scheduler (via flask_apscheduler)
-
-## Front-end
-
-A Bootstrap template called _[Gentelella](https://github.com/puikinsh/gentelella)_, and a number of JavaScript libraries.
+- **Start date**: instead of running the task immediately, the task starts at a specific time.
+- **Frequency**: the task is run periodically. This is especially useful for tasks that pull some information from the device, i.e netmiko **_show commands_** / **_NAPALM getters_** tasks.
 
 # How to use eNMS: a few examples
 
@@ -50,8 +40,8 @@ Nodes and links can be created in two ways:
 - one by one by specifying all properties manually, in the _Object creation_ page.
 - by importing an Excel file with one sheet per type of object.
 Examples of such Excel files are available in the **_/project folder_**.
-Once your objects have been created, you can go to the _Overview_ page.
-All objects are displayed in a sortable and searchable table.
+
+Once your objects have been created, you can go to the _Overview_ page. All objects are displayed in a sortable and searchable table.
 
 ![Object creation](https://github.com/afourmy/storage/raw/master/napalm_article/object_creation.gif)
 
@@ -67,6 +57,7 @@ All objects are displayed in a sortable and searchable table.
 For complex script, it is best to use Jinja2 templating language:
 - Write a Jinja2 template in the _Script creation_ page.
 - Import a YAML file that contains all associated variables.
+
 eNMS will take care of converting the template to a real text-based script.
 
 ![Send jinja2 script via SSH with netmiko](https://github.com/afourmy/storage/raw/master/napalm_article/netmiko_j2.gif)
@@ -89,7 +80,7 @@ You can also schedule a task to retrieve a NAPALM getter periodically.
 
 ![Configuration automation with NAPALM and Jinja2 scripting](https://github.com/afourmy/storage/raw/master/napalm_article/napalm_getters.gif)
 
-### Comparison
+## Comparison
 
 For all periodic tasks, you can compare the results between any two devices, at two different times.
 
@@ -98,6 +89,18 @@ The comparison result is displayed with two methods:
 - A **_ndiff_**: list every line and highlights interline changes.
 
 ![Comparison](https://github.com/afourmy/storage/raw/master/napalm_article/comparison.gif)
+
+# eNMS technical stack
+
+## Back-end
+
+- Web framework: Flask
+- Database: SQLAlchemy / SQLite (possible migration to PostgreSQL soon)
+- Task scheduling: AP Scheduler (via flask_apscheduler)
+
+## Front-end
+
+A Bootstrap template called _[Gentelella](https://github.com/puikinsh/gentelella)_, and a number of JavaScript libraries.
 
 # More
 
