@@ -4,3 +4,18 @@ layout: paginated
 {% for post in paginator.posts %}
   {% include archive-single.html %}
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <ul class="pager">
+      {% if paginator.page != 1 %}
+      {% if paginator.previous_page == 1 %}
+      <li class="previous"><a href="/blog/">&larr; Previous Page</a></li>
+      {% else %}
+      <li class="previous"><a href="/blog/page{{ paginator.previous_page }}">&larr; Previous Page</a></li>
+      {% endif %}
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next"><a href="/blog/page{{ paginator.next_page }}">Next Page &rarr;</a></li>
+      {% endif %}
+  </ul><!--pager-->
+{% endif %}
