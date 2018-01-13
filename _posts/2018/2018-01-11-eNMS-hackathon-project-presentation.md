@@ -47,14 +47,14 @@ Examples of such Excel files are available in the **_/project folder_**.
 
 Once your objects have been created, you can go to the _Overview_ page. All objects are displayed in a sortable and searchable table.
 
-![Object creation](https://github.com/afourmy/storage/raw/master/napalm_article/object_creation.gif)
+![Object creation](https://raw.githubusercontent.com/napalm-automation/napalm-automation.github.io/master/images/2018/eNMS-hackathon-project-presentation-object_creation.gif)
 
 ## Simple configuration script with Netmiko
 
 - Create a script in the _Script creation_ page.
 - Set the script parameters (netmiko driver, global delay factor, target devices).
 
-![Simple script with netmiko](https://github.com/afourmy/storage/raw/master/napalm_article/netmiko_simple.gif)
+![Simple script with netmiko](https://raw.githubusercontent.com/napalm-automation/napalm-automation.github.io/master/images/2018/eNMS-hackathon-project-presentation-netmiko_simple.gif)
 
 ## Template-based configuration
 
@@ -64,25 +64,25 @@ For complex script, it is best to use Jinja2 templating language:
 
 eNMS will take care of converting the template to a real text-based script.
 
-![Send jinja2 script via SSH with netmiko](https://github.com/afourmy/storage/raw/master/napalm_article/netmiko_j2.gif)
+![Send jinja2 script via SSH with netmiko](https://raw.githubusercontent.com/napalm-automation/napalm-automation.github.io/master/images/2018/eNMS-hackathon-project-presentation-netmiko_j2.gif)
 
 ## NAPALM configuration
 
 NAPALM can be used to change the configuration (merge or replace), either via a plain text script or a Jinja2-enabled template.
 
-![Use NAPALM to configure static routes](https://github.com/afourmy/storage/raw/master/napalm_article/napalm_config.gif)
+![Use NAPALM to configure static routes](https://raw.githubusercontent.com/napalm-automation/napalm-automation.github.io/master/images/2018/eNMS-hackathon-project-presentation-napalm_config.gif)
 
 ## Netmiko _show commands_ periodic retrieval
 
 You can schedule a task to retrieve the output of a list of commands (show, ping, traceroute, etc) periodically. The result is stored in the database and displayed in the logs of the task, in the _Task management_ page.
 
-![Netmiko show](https://github.com/afourmy/storage/raw/master/napalm_article/netmiko_show.gif)
+![Netmiko show](https://raw.githubusercontent.com/napalm-automation/napalm-automation.github.io/master/images/2018/eNMS-hackathon-project-presentation-netmiko_show.gif)
 
 ## NAPALM _getters_ periodic retrieval
 
 You can also schedule a task to retrieve a NAPALM getter periodically.
 
-![Configuration automation with NAPALM and Jinja2 scripting](https://github.com/afourmy/storage/raw/master/napalm_article/napalm_getters.gif)
+![Configuration automation with NAPALM and Jinja2 scripting](https://raw.githubusercontent.com/napalm-automation/napalm-automation.github.io/master/images/2018/eNMS-hackathon-project-presentation-napalm_getters.gif)
 
 ## Comparison
 
@@ -92,7 +92,7 @@ The comparison result is displayed with two methods:
 - A **_unified diff_**: show just the lines that have changed plus a few lines of context, in an inline style. (like Git)
 - A **_ndiff_**: list every line and highlights interline changes.
 
-![Comparison](https://github.com/afourmy/storage/raw/master/napalm_article/comparison.gif)
+![Comparison](https://raw.githubusercontent.com/napalm-automation/napalm-automation.github.io/master/images/2018/eNMS-hackathon-project-presentation-comparison.gif)
 
 # eNMS technical stack
 
