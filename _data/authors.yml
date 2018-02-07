@@ -50,3 +50,14 @@ ktbyers:
   github      : "ktbyers"
   twitter     : "kirkbyers"
   linkedin    : "ktbyers"
+
+afourmy:
+  name        : "Antoine Fourmy"
+  bio         : "Network automation engineer"
+  title       : "Contributor"
+  avatar      : "afourmy-160x160.jpg"
+  avatar_440  : "afourmy-400x400.jpg"
+  avatar_sidebar      : "afourmy-400x400.jpg"
+  uri         : "http://afourmy.com"
+  github      : "afourmy"
+  linkedin    : "afourmy"
