@@ -9,7 +9,7 @@ During the Hackathon, I worked on eNAPALM, a simple web interface to Netmiko and
 The idea was to provide a way to use netmiko and napalm for those who don't have any Python or Ansible knowledge.
 
 After a few weeks, I decided to start all over from scratch and created a whole new project designed to be a Network Management System focused on network visualization and automation: **eNMS**.
-
+<!--more-->
 **You can find a demo of eNMS _[here](http://afourmy.pythonanywhere.com/)_ !**
 ```
 Username: cisco
@@ -18,9 +18,9 @@ Password: cisco
 
 In this post, I will start by briefly introducing eNMS network automation features, then show with some practical video examples of Netmiko and NAPALM automation on a Cisco 1841 (IOS) with eNMS.
 
-# eNMS network automation features
+### eNMS network automation features
 
-## Types of task
+#### Types of task
 
 There are four types of task in eNMS:
 - **Netmiko _configuration_ task**: list of commands to configure the device (plain text or Jinja2 template).
@@ -30,15 +30,15 @@ There are four types of task in eNMS:
 
 For all tasks, the user can choose one or more target devices.
 
-## Task scheduling
+### Task scheduling
 
 eNMS also provides some scheduling functions:
 - **Start date**: instead of running the task immediately, the task starts at a specific time.
 - **Frequency**: the task is run periodically. This is especially useful for tasks that pull some information from the device, i.e netmiko **_show commands_** / **_NAPALM getters_** tasks.
 
-# How to use eNMS: a few examples
+### How to use eNMS: a few examples
 
-## First step: import your network
+#### First step: import your network
 
 Nodes and links can be created in two ways: 
 - one by one by specifying all properties manually, in the _Object creation_ page.
@@ -49,14 +49,14 @@ Once your objects have been created, you can go to the _Overview_ page. All obje
 
 ![Object creation](/images/2018/eNMS-hackathon-project-presentation-object_creation.gif)
 
-## Simple configuration script with Netmiko
+#### Simple configuration script with Netmiko
 
 - Create a script in the _Script creation_ page.
 - Set the script parameters (netmiko driver, global delay factor, target devices).
 
 ![Simple script with netmiko](/images/2018/eNMS-hackathon-project-presentation-netmiko_simple.gif)
 
-## Template-based configuration
+#### Template-based configuration
 
 For complex script, it is best to use Jinja2 templating language:
 - Write a Jinja2 template in the _Script creation_ page.
@@ -66,25 +66,25 @@ eNMS will take care of converting the template to a real text-based script.
 
 ![Send jinja2 script via SSH with netmiko](/images/2018/eNMS-hackathon-project-presentation-netmiko_j2.gif)
 
-## NAPALM configuration
+#### NAPALM configuration
 
 NAPALM can be used to change the configuration (merge or replace), either via a plain text script or a Jinja2-enabled template.
 
 ![Use NAPALM to configure static routes](/images/2018/eNMS-hackathon-project-presentation-napalm_config.gif)
 
-## Netmiko _show commands_ periodic retrieval
+#### Netmiko _show commands_ periodic retrieval
 
 You can schedule a task to retrieve the output of a list of commands (show, ping, traceroute, etc) periodically. The result is stored in the database and displayed in the logs of the task, in the _Task management_ page.
 
 ![Netmiko show](/images/2018/eNMS-hackathon-project-presentation-netmiko_show.gif)
 
-## NAPALM _getters_ periodic retrieval
+#### NAPALM _getters_ periodic retrieval
 
 You can also schedule a task to retrieve a NAPALM getter periodically.
 
 ![Configuration automation with NAPALM and Jinja2 scripting](/images/2018/eNMS-hackathon-project-presentation-napalm_getters.gif)
 
-## Comparison
+#### Comparison
 
 For all periodic tasks, you can compare the results between any two devices, at two different times.
 
@@ -94,18 +94,18 @@ The comparison result is displayed with two methods:
 
 ![Comparison](/images/2018/eNMS-hackathon-project-presentation-comparison.gif)
 
-# eNMS technical stack
+### eNMS technical stack
 
-## Back-end
+#### Back-end
 
 - Web framework: Flask
 - Database: SQLAlchemy / SQLite (possible migration to PostgreSQL soon)
 - Task scheduling: AP Scheduler (via flask_apscheduler)
 
-## Front-end
+#### Front-end
 
 A Bootstrap template called _[Gentelella](https://github.com/puikinsh/gentelella)_, and a number of JavaScript libraries.
 
-# More
+### More
 
 You can find more information about eNMS on _[Github](https://github.com/afourmy/eNMS)_
