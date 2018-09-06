@@ -103,8 +103,7 @@ Now, let's analyse each field from the snippet above:
 ``yang_model``: simply names the YANG model that is used to standardize the
 outgoing document. In the previous example, its value is ``openconfig-bgp``
 which means that the hierarchy respects the defined hierarchy from the
-[openconfig-bgp](http://ops.openconfig.net/branches/master/docs/openconfig-bgp.html)
-YANG model.
+openconfig-bgp YANG model.
 
 ``error``: is a cross-platform unique identifier of the notification.
 To see the complete list of available notification identifiers, please check
