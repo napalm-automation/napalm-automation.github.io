@@ -9,8 +9,8 @@ linx:
   name: "The London Internet Exchange"
   uri: https://www.linx.net/
   about: "The London Internet Exchange (LINX) is a global leader of Internet Exchange Points (IXP). Our company ethos and aspirations result in constant growth and improvement in our services."
-  logo_3x2: linx-900x600.jpg
-  logo_whitespace_3x2: linx-whitespace-900x600.jpg
+  logo_3x2: linx-900x600.png
+  logo_whitespace_3x2: linx-whitespace-900x600.png
 
 cloudflare:
   name: Cloudflare
