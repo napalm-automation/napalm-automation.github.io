@@ -180,7 +180,7 @@ Now let's try to represent the model in a tree format:
 ``` shell
 $ pyang -f tree napalm-star-wars.yang
 module: napalm-star-wars
-    +--rw roster
+    +--rw universe
         +--rw individual* [name]
            +--rw name           string
            +--rw age?           age
