@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "html-proofer"
-gem "github-pages", '>=161', group: :jekyll_plugins
+gem "github-pages", '>=192', group: :jekyll_plugins
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
