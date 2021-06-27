@@ -1,5 +1,4 @@
-FROM jekyll/jekyll:3.3.1
-MAINTAINER napalm-automation
+FROM jekyll/jekyll:stable
 
 COPY Gemfile /tmp
 RUN cd /tmp && bundle

@@ -20,7 +20,7 @@ This website is created with the static site generator Jekyll. Like all the rest
 Also, don't forget to let us know what you think in the comments below!
 
 ### Stay up to date
-If you want to stay up to date about the project you can subscribe to the RSS feed: [https://napalm-automation.net/feed.xml]({{ site.url }}/feed.xml). So just add that to your RSS Reader, use /feed in Slack to subscribe or however you prefer to consume feeds.
+If you want to stay up to date about the project you can subscribe to the RSS feed: [http://napalm-automation.github.io/feed.xml]({{ site.url }}/feed.xml). So just add that to your RSS Reader, use /feed in Slack to subscribe or however you prefer to consume feeds.
 
 Another way to stay up to date is to join the [Network to Code Slack team](https://networktocode.herokuapp.com/), you will find us in the #napalm channel.
 
